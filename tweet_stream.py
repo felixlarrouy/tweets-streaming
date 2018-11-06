@@ -4,6 +4,7 @@ from tweepy import Stream
 from tweepy.streaming import StreamListener
 from socket import socket
 import json
+import sys
 
 consumer_key = '8bwa6ory4xsBzOIJ2gAO2ukK2'
 consumer_secret = 'cEDvbXAa9DkLPWxutnTZpF2gptgruRRj3KhGMfkYdMqkqCfdqj'
@@ -21,7 +22,6 @@ class TweetsListener(StreamListener):
         try:
             tweet = json.loads(data)
             print(tweet['text'])
-            # self.client_socket.send(tweet['entities']['hashtags'].encode('utf-8'))
             self.client_socket.send(tweet['text'].encode('utf-8'))
             return True
         except BaseException as e:
@@ -36,7 +36,7 @@ def sendData(c_socket):
     auth = OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
     twitter_stream = Stream(auth, TweetsListener(c_socket))
-    twitter_stream.filter(track=['messi'])
+    twitter_stream.filter(track=[sys.argv[1]])
 
 s = socket()          # Create a socket object
 host = "localhost"    # Get local machine name
