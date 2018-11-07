@@ -8,7 +8,7 @@
 python server.py {word_in_tweet}
 ```
 
-2. Run the jupyter notebook
+2. Run the [jupyter notebook](https://github.com/felixlarrouy/tweets-streaming/blob/master/pyspark_streaming.ipynb)
 
 ----
 *Credits: Felix Larrouy & Guillaume Fradet*
