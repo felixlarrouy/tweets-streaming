@@ -42,7 +42,8 @@ def sendData(c_socket):
     twitter_stream.filter(track=[sys.argv[1]])
 
 
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s: # socket object
+# s: socket object
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.bind((host, port)) # Bind to the port
     print("Listening on port: %s" % str(port))
 
