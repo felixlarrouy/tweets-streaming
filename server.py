@@ -6,10 +6,10 @@ from tweepy import OAuthHandler
 from tweepy import Stream
 from tweepy.streaming import StreamListener
 
-consumer_key = '8bwa6ory4xsBzOIJ2gAO2ukK2'
-consumer_secret = 'cEDvbXAa9DkLPWxutnTZpF2gptgruRRj3KhGMfkYdMqkqCfdqj'
-access_token = '1059729535053295617-SgThBTq7GRhA8bvqVxwatOBku3COBA'
-access_token_secret = '3F6qTH4Avtqus6HowNKZHE1epGtzPPtMAk7IRhFE20HyN'
+consumer_key = 'your_consumer_key'
+consumer_secret = 'your_consumer_secret'
+access_token = 'your_access_token'
+access_token_secret = 'your_access_token_secret'
 
 host = "localhost"    # Get local machine name
 port = 5555           # Reserve a port for streaming.
